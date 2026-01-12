@@ -1,7 +1,7 @@
 {
   "name": "com.uralhedgehog.audiosystem",
   "displayName": "UH Audio System",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "unity": "2022.3",
   "description": "",
   "exclude": [
