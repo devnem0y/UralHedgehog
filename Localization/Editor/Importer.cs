@@ -1,53 +1,56 @@
 ﻿using UnityEditor;
 using System.IO;
 
-[InitializeOnLoad]
-public static class Importer
+namespace UralHedgehog.Localization
 {
-    private const string packageName = "com.uralhedgehog.localization";
-    private const string moduleName = "Localization";
+    [InitializeOnLoad]
+    public static class Importer
+    {
+        private const string packageName = "com.uralhedgehog.localization";
+        private const string moduleName = "Localization";
     
-    private static bool initialized;
+        private static bool initialized;
 
-    static Importer()
-    {
-        EditorApplication.delayCall += InitializeOnProjectLoad;
-        EditorApplication.projectChanged += HandleProjectChange;
-    }
-
-    private static void HandleProjectChange()
-    {
-        if(!initialized) InitializeOnProjectLoad();
-    }
-
-    private static void InitializeOnProjectLoad()
-    {
-        if(initialized || EditorApplication.isPlayingOrWillChangePlaymode) return;
-
-        initialized = true;
-        
-        var packagePath = Path.GetFullPath($"Packages/{packageName}");
-        var templatePath = Path.Combine(packagePath, "RuntimeEditable~");
-        var targetPath = Path.GetFullPath($"Assets/Ural Hedgehog/{moduleName}");
-
-        if (!Directory.Exists(templatePath) || Directory.Exists(targetPath)) return;
-        
-        CopyDirectory(templatePath, targetPath);
-        EditorApplication.delayCall += AssetDatabase.Refresh;
-    }
-
-    private static void CopyDirectory(string source, string dest)
-    {
-        Directory.CreateDirectory(dest);
-        foreach(var file in Directory.GetFiles(source))
+        static Importer()
         {
-            var destFile = Path.Combine(dest, Path.GetFileName(file));
-            File.Copy(file, destFile, false);
+            EditorApplication.delayCall += InitializeOnProjectLoad;
+            EditorApplication.projectChanged += HandleProjectChange;
         }
-        foreach(var dir in Directory.GetDirectories(source))
+
+        private static void HandleProjectChange()
         {
-            var destDir = Path.Combine(dest, Path.GetFileName(dir));
-            CopyDirectory(dir, destDir);
+            if(!initialized) InitializeOnProjectLoad();
+        }
+
+        private static void InitializeOnProjectLoad()
+        {
+            if(initialized || EditorApplication.isPlayingOrWillChangePlaymode) return;
+
+            initialized = true;
+        
+            var packagePath = Path.GetFullPath($"Packages/{packageName}");
+            var templatePath = Path.Combine(packagePath, "RuntimeEditable~");
+            var targetPath = Path.GetFullPath($"Assets/Ural Hedgehog/{moduleName}");
+
+            if (!Directory.Exists(templatePath) || Directory.Exists(targetPath)) return;
+        
+            CopyDirectory(templatePath, targetPath);
+            EditorApplication.delayCall += AssetDatabase.Refresh;
+        }
+
+        private static void CopyDirectory(string source, string dest)
+        {
+            Directory.CreateDirectory(dest);
+            foreach(var file in Directory.GetFiles(source))
+            {
+                var destFile = Path.Combine(dest, Path.GetFileName(file));
+                File.Copy(file, destFile, false);
+            }
+            foreach(var dir in Directory.GetDirectories(source))
+            {
+                var destDir = Path.Combine(dest, Path.GetFileName(dir));
+                CopyDirectory(dir, destDir);
+            }
         }
     }
 }
