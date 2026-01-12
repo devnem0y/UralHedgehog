@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UralHedgehog.Audio
 {
-    [CreateAssetMenu(fileName = "AudioResources", menuName = "Ural Hedgehog/AudioResources", order = 2)]
+    [CreateAssetMenu(fileName = "AudioResources", menuName = "Ural Hedgehog/Audio System/AudioResources", order = 2)]
     public class AudioResources : ScriptableObject
     {
         [SerializeField] private List<TrackMusic> _musics;
