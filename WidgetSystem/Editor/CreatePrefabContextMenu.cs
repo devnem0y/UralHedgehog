@@ -24,7 +24,7 @@ namespace UralHedgehog.UI
                 return;
             }
             
-            var instance = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
+            var instance = Object.Instantiate(prefab);
             PlaceInScene(instance);
         }
 
@@ -36,7 +36,7 @@ namespace UralHedgehog.UI
             }
 
             instance.transform.localPosition = Vector3.zero;
-            instance.name = instance.name.Replace("(Clone)", "UIRoot");
+            instance.name = instance.name.Replace("(Clone)", "");
             Undo.RegisterCreatedObjectUndo(instance, "Create Prefab");
             Selection.activeObject = instance;
         }
