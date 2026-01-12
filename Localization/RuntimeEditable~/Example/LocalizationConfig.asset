@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e055bbe20ca99b64bb9b46fdccd2542f, type: 3}
+  m_Name: LocalizationConfig
+  m_EditorClassIdentifier: UralHedgehog.Localization::UralHedgehog.Localization.LocalizationConfig
+  _localizationFile: {fileID: 4900000, guid: b5c3a74023f550b4c86af44bc0fa0c63, type: 3}
+  _basic: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  _extra: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  _chinese: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  _basicTMP: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  _extraTMP: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  _chineseTMP: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
