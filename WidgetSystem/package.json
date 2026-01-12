@@ -1,0 +1,17 @@
+{
+  "name": "com.uralhedgehog.widgetsystem",
+  "displayName": "UH Widget System",
+  "version": "1.0.1",
+  "unity": "2022.3",
+  "description": "A system for creating and managing widgets.",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "exclude": [
+    "**/RuntimeEditable~/**"
+  ],
+  
+  "author": {
+    "name": "Ural Hedgehog"
+  }
+}
