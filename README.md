@@ -2,7 +2,8 @@
 ```json
 {
   "dependencies": {
-    "com.uralhedgehog.widgetsystem": "https://github.com/devnem0y/UralHedgehog.git?path=/WidgetSystem"
+    "com.uralhedgehog.widgetsystem": "https://github.com/devnem0y/UralHedgehog.git?path=/WidgetSystem",
+    "com.uralhedgehog.localization": "https://github.com/devnem0y/UralHedgehog.git?path=/Localization"
   }
 }
 ```
