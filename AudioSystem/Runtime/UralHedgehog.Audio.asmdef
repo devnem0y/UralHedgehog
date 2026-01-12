@@ -1,0 +1,16 @@
+{
+    "name": "UralHedgehog.Audio",
+    "rootNamespace": "",
+    "references": [
+        "GUID:686adc6ae89054a4d9eb2013f4f1ced8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
