@@ -1,21 +1,25 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UralHedgehog.Audio;
 
-public class EntryPoint : MonoBehaviour
+namespace UralHedgehog.Audio
 {
-    [SerializeField] private AudioMixer _audioMixer;
-    [SerializeField] private AudioResources _audioResources;
-    [SerializeField] private AudioComponent _audio;
-
-    private void Awake()
+    public class EntryPoint : MonoBehaviour
     {
-        new AudioManager(_audioMixer, _audioResources);
-        _audio.Init();
-    }
+        [SerializeField] private AudioMixer _audioMixer;
+        [SerializeField] private AudioResources _audioResources;
+        [SerializeField] private AudioComponent _audio;
 
-    private void Start()
-    {
-        _audio.Play(Music.MUSIC_MENU);
+        private void Awake()
+        {
+            new AudioManager(_audioMixer, _audioResources);
+            _audio.Init();
+        }
+
+        private void Start()
+        {
+            _audio.Play(Music.MUSIC_MENU);
+        }
     }
 }
+
+
