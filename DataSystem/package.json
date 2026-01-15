@@ -1,0 +1,14 @@
+{
+  "name": "com.uralhedgehog.datasystem",
+  "displayName": "UH Data System",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "",
+  "exclude": [
+    "**/RuntimeEditable~/**"
+  ],
+  
+  "author": {
+    "name": "Ural Hedgehog"
+  }
+}
