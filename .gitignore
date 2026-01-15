@@ -11,8 +11,7 @@
 /[Mm]emoryCaptures/
 /[Uu]ser[Ss]ettings/
 
-# Never ignore Asset meta data
-!/*.meta
+*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
