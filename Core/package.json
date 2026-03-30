@@ -1,14 +1,14 @@
 {
   "name": "com.uralhedgehog.core",
   "displayName": "UH Core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2022.3",
   "description": "",
   "dependencies": {
-    "com.uralhedgehog.widgetsystem": "https://github.com/devnem0y/UralHedgehog.git?path=/WidgetSystem#main",
-    "com.uralhedgehog.audiosystem": "https://github.com/devnem0y/UralHedgehog.git?path=/AudioSystem#main",
-    "com.uralhedgehog.localization": "https://github.com/devnem0y/UralHedgehog.git?path=/Localization#main",
-    "com.uralhedgehog.datasystem": "https://github.com/devnem0y/UralHedgehog.git?path=/DataSystem#main"
+    "com.uralhedgehog.widgetsystem": "https://github.com/devnem0y/UralHedgehog.git?path=/WidgetSystem#1.0.2",
+    "com.uralhedgehog.audiosystem": "https://github.com/devnem0y/UralHedgehog.git?path=/AudioSystem#1.0.4",
+    "com.uralhedgehog.localization": "https://github.com/devnem0y/UralHedgehog.git?path=/Localization#1.0.1",
+    "com.uralhedgehog.datasystem": "https://github.com/devnem0y/UralHedgehog.git?path=/DataSystem#1.0.3"
   },
   "exclude": [
     "**/RuntimeEditable~/**"
