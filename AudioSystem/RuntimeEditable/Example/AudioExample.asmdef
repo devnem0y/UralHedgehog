@@ -1,0 +1,17 @@
+{
+    "name": "AudioExample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:686adc6ae89054a4d9eb2013f4f1ced8",
+        "GUID:ad2080521938b2f4ba9cfa522f909b4b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

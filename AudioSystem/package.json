@@ -1,0 +1,14 @@
+{
+  "name": "com.uralhedgehog.audiosystem",
+  "displayName": "UH Audio System",
+  "version": "1.0.4",
+  "unity": "2022.3",
+  "description": "",
+  "exclude": [
+    "**/RuntimeEditable~/**"
+  ],
+  
+  "author": {
+    "name": "Ural Hedgehog"
+  }
+}
