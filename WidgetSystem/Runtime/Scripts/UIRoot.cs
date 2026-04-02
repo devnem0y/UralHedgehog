@@ -10,12 +10,7 @@ namespace UralHedgehog.UI
         [SerializeField] private Transform _wrapperWindows;
         [SerializeField] private WidgetStorage _storage;
 
-        private List<IWidget> _list;
-        
-        private void Awake()
-        {
-            _list = new List<IWidget>();
-        }
+        private readonly List<IWidget> _list = new ();
 
         public void Create<T>(string widgetName, T model)
         {
