@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580609acfcab22d4aae9666decc5a613, type: 3}
   m_Name: WidgetStorage
   m_EditorClassIdentifier: UralHedgehog.UI::UralHedgehog.UI.WidgetStorage
-  _widgets: []
+  _widgets:
+  - {fileID: 7977366462086664235, guid: 35a06447b9393a846bcca1ebd1c1fddc, type: 3}
+  - {fileID: 8015555602500150929, guid: bf8dee814bddf314d88808cc2f124a48, type: 3}

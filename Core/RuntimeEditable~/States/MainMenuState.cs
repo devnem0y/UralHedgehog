@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using UralHedgehog.UI;
 
 namespace UralHedgehog.Core
 {
@@ -6,7 +6,8 @@ namespace UralHedgehog.Core
     {
         public void Enter()
         {
-            
+            var ui = ServiceLocator.Get<UIRoot>();
+            ui.Create<IEmptyWidget>(nameof(PMainMenu), null);
         }
 
         public void Exit()
@@ -16,10 +17,7 @@ namespace UralHedgehog.Core
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                ServiceLocator.Get<StateMachine>().ChangeState<GameplayState>();
-            }
+            
         }
 
         public void FixedUpdate()
