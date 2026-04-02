@@ -17,5 +17,15 @@
         {
             
         }
+
+        public void FixedUpdate()
+        {
+            
+        }
+
+        public void LateUpdate()
+        {
+            
+        }
     }
 }

@@ -62,6 +62,21 @@ namespace UralHedgehog.Core
         private void Update()
         {
             _stateMachine.Update();
+            
+            Pause();
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Debug.Log($"CurrentState: <color=yellow>{_stateMachine.CurrentState.GetType().Name}</color>");
+            }
+        }
+
+        private void Pause()
+        {
+            //TODO: Обработка глобальной паузы
+            if (!Input.GetKeyDown(KeyCode.P)) return;
+            
+            if (_stateMachine.CurrentState is GameplayState) PauseManager.SetGamePaused(!PauseManager.IsGamePaused);
         }
 
         private void OnDestroy()

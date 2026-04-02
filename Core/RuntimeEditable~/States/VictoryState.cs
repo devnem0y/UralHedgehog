@@ -1,12 +1,10 @@
-﻿using UnityEngine;
-
-namespace UralHedgehog.Core
+﻿namespace UralHedgehog.Core
 {
-    public class MainMenuState : IState
+    public class VictoryState : IState
     {
         public void Enter()
         {
-            
+            ServiceLocator.Get<StateMachine>().ChangeState<GameplayState>();
         }
 
         public void Exit()
@@ -16,10 +14,7 @@ namespace UralHedgehog.Core
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                ServiceLocator.Get<StateMachine>().ChangeState<GameplayState>();
-            }
+            
         }
 
         public void FixedUpdate()
