@@ -1,11 +1,11 @@
 {
   "name": "com.uralhedgehog.core",
   "displayName": "UH Core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "unity": "2022.3",
   "description": "",
   "dependencies": {
-    "com.uralhedgehog.widgetsystem": "1.0.2",
+    "com.uralhedgehog.widgetsystem": "1.0.3",
     "com.uralhedgehog.audiosystem": "1.0.4",
     "com.uralhedgehog.localization": "1.0.1",
     "com.uralhedgehog.datasystem": "1.0.3"

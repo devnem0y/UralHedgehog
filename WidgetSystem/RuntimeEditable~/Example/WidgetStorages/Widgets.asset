@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Widgets
   m_EditorClassIdentifier: UralHedgehog.UI::UralHedgehog.UI.WidgetStorage
   _widgets:
-  - {fileID: 8802683347478008558, guid: f7a3560df2ccb6549891c7a38404385e, type: 3}
-  - {fileID: -1430340705365435324, guid: 674ba6b9f77aace43af4b9f1708162f8, type: 3}
+  - {fileID: 8802683347478008558, guid: db55c73508db04b4185208bb8eb41cb2, type: 3}
+  - {fileID: -1430340705365435324, guid: 07f5b8d8756dd1d41b81de31e89b8b43, type: 3}
