@@ -5,7 +5,7 @@
   "unity": "2022.3",
   "description": "",
   "dependencies": {
-    "com.uralhedgehog.widgetsystem": "1.0.4",
+    "com.uralhedgehog.widgetsystem": "1.0.5",
     "com.uralhedgehog.audiosystem": "1.0.4",
     "com.uralhedgehog.localization": "1.0.1",
     "com.uralhedgehog.datasystem": "1.0.3"

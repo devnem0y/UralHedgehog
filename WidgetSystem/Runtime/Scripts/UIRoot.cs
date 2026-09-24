@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UralHedgehog.UI
 {
-    public class UIRoot : MonoBehaviour
+    public class UIRoot : MonoBehaviour, IUIRoot
     {
         [SerializeField] private Transform _wrapperPanels;
         [SerializeField] private Transform _wrapperWindows;
