@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace UralHedgehog.Audio
 {
@@ -150,19 +152,25 @@ namespace UralHedgehog.Audio
         {
             AudioSource source = null;
 
-            if (_sourceMusicCurrent.clip == _sourceMusicNext.clip)
+            if (_sourceMusicCurrent == null) return;
+
+            if (_sourceMusicNext != null)
             {
-                source = _sourceMusicNext;
+                if (_sourceMusicCurrent.clip == _sourceMusicNext.clip) source = _sourceMusicNext;
             }
-            else if (_sourceMusicCurrent.clip == _sourceMusicPrevious.clip)
+            else if (_sourceMusicPrevious != null)
             {
-                source = _sourceMusicPrevious;
+                if (_sourceMusicCurrent.clip == _sourceMusicPrevious.clip) source = _sourceMusicPrevious;
             }
 
             if (source == null) return;
 
-            StartCoroutine(Delay(source, fadeDelay, false));
-            _sourceMusicCurrent = null;
+            StartCoroutine(Delay(source, fadeDelay, false, () =>
+            {
+                _sourceMusicCurrent = null;
+                _sourceMusicNext =  null;
+                _sourceMusicPrevious = null;
+            }));
         }
 
         public void StopSound(Sound sound)
@@ -293,7 +301,7 @@ namespace UralHedgehog.Audio
             }
         }
 
-        private IEnumerator Delay(AudioSource source, float delay, bool increase = true)
+        private IEnumerator Delay(AudioSource source, float delay, bool increase = true, Action callback = null)
         {
             var volume = source.volume;
             var t = 0f;
@@ -318,6 +326,7 @@ namespace UralHedgehog.Audio
 
                 source.Stop();
                 Destroy(source);
+                callback?.Invoke();
             }
         }
     }
